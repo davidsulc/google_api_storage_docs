@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.19.1">
+    <title>GoogleApi.Storage.V1.Model.Object – google_api_storage v0.1.0</title>
+    <link rel="stylesheet" href="dist/html-4f6aa19597cd1982c84e.css" />
+    <script src="dist/sidebar_items-848688cea8.js"></script>
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+google_api_storage      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">google_api_storage v0.1.0</small>
+GoogleApi.Storage.V1.Model.Object        
+          <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/object.ex#L19" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+      </h1>
+
+
+        <section id="moduledoc">
+<p>An object.</p>
+<h2 id="module-attributes" class="section-heading">
+  <a href="#module-attributes" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Attributes
+</h2>
+
+<ul>
+<li>acl ([ObjectAccessControl]): Access controls on the object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>bucket (String.t): The name of the bucket containing this object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>cacheControl (String.t): Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age&#x3D;3600. Defaults to: <code class="inline">null</code>.
+</li>
+<li>componentCount (integer()): Number of underlying components that make up this object. Components are accumulated by compose operations. Defaults to: <code class="inline">null</code>.
+</li>
+<li>contentDisposition (String.t): Content-Disposition of the object data. Defaults to: <code class="inline">null</code>.
+</li>
+<li>contentEncoding (String.t): Content-Encoding of the object data. Defaults to: <code class="inline">null</code>.
+</li>
+<li>contentLanguage (String.t): Content-Language of the object data. Defaults to: <code class="inline">null</code>.
+</li>
+<li>contentType (String.t): Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream. Defaults to: <code class="inline">null</code>.
+</li>
+<li>crc32c (String.t): CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices. Defaults to: <code class="inline">null</code>.
+</li>
+<li>customerEncryption (ObjectCustomerEncryption):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>etag (String.t): HTTP 1.1 Entity tag for the object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>eventBasedHold (boolean()): Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Defaults to: <code class="inline">null</code>.
+</li>
+<li>generation (String.t): The content generation of this object. Used for object versioning. Defaults to: <code class="inline">null</code>.
+</li>
+<li>id (String.t): The ID of the object, including the bucket name, object name, and generation number. Defaults to: <code class="inline">null</code>.
+</li>
+<li>kind (String.t): The kind of item this is. For objects, this is always storage#object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>kmsKeyName (String.t): Cloud KMS Key used to encrypt this object, if the object is encrypted by such a key. Limited availability; usable only by enabled projects. Defaults to: <code class="inline">null</code>.
+</li>
+<li>md5Hash (String.t): MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices. Defaults to: <code class="inline">null</code>.
+</li>
+<li>mediaLink (String.t): Media download link. Defaults to: <code class="inline">null</code>.
+</li>
+<li>metadata (%{optional(String.t) &#x3D;&gt; String.t}): User-provided metadata, in key/value pairs. Defaults to: <code class="inline">null</code>.
+</li>
+<li>metageneration (String.t): The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>name (String.t): The name of the object. Required if not specified by URL parameter. Defaults to: <code class="inline">null</code>.
+</li>
+<li>owner (ObjectOwner):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>retentionExpirationTime (DateTime.t): A server-determined value that specifies the earliest time that the object&#39;s retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold). Defaults to: <code class="inline">null</code>.
+</li>
+<li>selfLink (String.t): The link to this object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>size (String.t): Content-Length of the data in bytes. Defaults to: <code class="inline">null</code>.
+</li>
+<li>storageClass (String.t): Storage class of the object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>temporaryHold (boolean()): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object. Defaults to: <code class="inline">null</code>.
+</li>
+<li>timeCreated (DateTime.t): The creation time of the object in RFC 3339 format. Defaults to: <code class="inline">null</code>.
+</li>
+<li>timeDeleted (DateTime.t): The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted. Defaults to: <code class="inline">null</code>.
+</li>
+<li>timeStorageClassUpdated (DateTime.t): The time at which the object&#39;s storage class was last changed. When the object is initially created, it will be set to timeCreated. Defaults to: <code class="inline">null</code>.
+</li>
+<li>updated (DateTime.t): The modification time of the object metadata in RFC 3339 format. Defaults to: <code class="inline">null</code>.
+</li>
+</ul>
+        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+</div>
+  </div>
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decode/2">decode(value, options)</a>
+  </div>
+    <div class="summary-synopsis"><p>Unwrap a decoded JSON object into its complex fields</p>
+</div>
+</div>
+  </div>
+        </section>
+
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Types          </h1>
+          <div class="types-list">
+<div class="detail" id="t:t/0">
+    <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">t()</span>
+      <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/object.ex#L60" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+        
+      <div class="specs">
+          <pre>t() :: %GoogleApi.Storage.V1.Model.Object{
+  acl: [<a href="GoogleApi.Storage.V1.Model.ObjectAccessControl.html#t:t/0">GoogleApi.Storage.V1.Model.ObjectAccessControl.t</a>()],
+  bucket: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  cacheControl: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  componentCount: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  contentDisposition: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  contentEncoding: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  contentLanguage: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  contentType: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  crc32c: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  customerEncryption: <a href="GoogleApi.Storage.V1.Model.ObjectCustomerEncryption.html#t:t/0">GoogleApi.Storage.V1.Model.ObjectCustomerEncryption.t</a>(),
+  etag: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  eventBasedHold: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  generation: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  id: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  kind: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  kmsKeyName: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  md5Hash: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  mediaLink: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  metadata: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
+  metageneration: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  name: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  owner: <a href="GoogleApi.Storage.V1.Model.ObjectOwner.html#t:t/0">GoogleApi.Storage.V1.Model.ObjectOwner.t</a>(),
+  retentionExpirationTime: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  selfLink: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  size: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  storageClass: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  temporaryHold: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  timeCreated: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  timeDeleted: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  timeStorageClassUpdated: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  updated: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>()
+}</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</div>
+          </div>
+        </section>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions          </h1>
+          <div class="functions-list">
+<div class="detail" id="decode/2">
+    <div class="detail-header">
+    <a href="#decode/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">decode(value, options)</span>
+      <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/object.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+        
+      <div class="specs">
+          <pre>decode(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">struct</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">struct</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+<p>Unwrap a decoded JSON object into its complex fields.</p>
+  </section>
+</div>
+          </div>
+        </section>
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/html-4f6aa19597cd1982c84e.js"></script>
+  
+  </body>
+</html>
+

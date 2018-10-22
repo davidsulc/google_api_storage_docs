@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.19.1">
+    <title>GoogleApi.Storage.V1.Model.Bucket – google_api_storage v0.1.0</title>
+    <link rel="stylesheet" href="dist/html-4f6aa19597cd1982c84e.css" />
+    <script src="dist/sidebar_items-848688cea8.js"></script>
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+google_api_storage      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">google_api_storage v0.1.0</small>
+GoogleApi.Storage.V1.Model.Bucket        
+          <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/bucket.ex#L19" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+      </h1>
+
+
+        <section id="moduledoc">
+<p>A bucket.</p>
+<h2 id="module-attributes" class="section-heading">
+  <a href="#module-attributes" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Attributes
+</h2>
+
+<ul>
+<li>acl ([BucketAccessControl]): Access controls on the bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>billing (BucketBilling):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>cors ([BucketCors]): The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration. Defaults to: <code class="inline">null</code>.
+</li>
+<li>defaultEventBasedHold (boolean()): The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed. Defaults to: <code class="inline">null</code>.
+</li>
+<li>defaultObjectAcl ([ObjectAccessControl]): Default access controls to apply to new objects when no ACL is provided. Defaults to: <code class="inline">null</code>.
+</li>
+<li>encryption (BucketEncryption):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>etag (String.t): HTTP 1.1 Entity tag for the bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>id (String.t): The ID of the bucket. For buckets, the id and name properties are the same. Defaults to: <code class="inline">null</code>.
+</li>
+<li>kind (String.t): The kind of item this is. For buckets, this is always storage#bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>labels (%{optional(String.t) &#x3D;&gt; String.t}): User-provided labels, in key/value pairs. Defaults to: <code class="inline">null</code>.
+</li>
+<li>lifecycle (BucketLifecycle):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>location (String.t): The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer&#39;s guide for the authoritative list. Defaults to: <code class="inline">null</code>.
+</li>
+<li>logging (BucketLogging):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>metageneration (String.t): The metadata generation of this bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>name (String.t): The name of the bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>owner (BucketOwner):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>projectNumber (String.t): The project number of the project the bucket belongs to. Defaults to: <code class="inline">null</code>.
+</li>
+<li>retentionPolicy (BucketRetentionPolicy):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>selfLink (String.t): The URI of this bucket. Defaults to: <code class="inline">null</code>.
+</li>
+<li>storageClass (String.t): The bucket&#39;s default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes. Defaults to: <code class="inline">null</code>.
+</li>
+<li>timeCreated (DateTime.t): The creation time of the bucket in RFC 3339 format. Defaults to: <code class="inline">null</code>.
+</li>
+<li>updated (DateTime.t): The modification time of the bucket in RFC 3339 format. Defaults to: <code class="inline">null</code>.
+</li>
+<li>versioning (BucketVersioning):  Defaults to: <code class="inline">null</code>.
+</li>
+<li>website (BucketWebsite):  Defaults to: <code class="inline">null</code>.
+</li>
+</ul>
+        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+</div>
+  </div>
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decode/2">decode(value, options)</a>
+  </div>
+    <div class="summary-synopsis"><p>Unwrap a decoded JSON object into its complex fields</p>
+</div>
+</div>
+  </div>
+        </section>
+
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Types          </h1>
+          <div class="types-list">
+<div class="detail" id="t:t/0">
+    <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">t()</span>
+      <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/bucket.ex#L53" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+        
+      <div class="specs">
+          <pre>t() :: %GoogleApi.Storage.V1.Model.Bucket{
+  acl: [<a href="GoogleApi.Storage.V1.Model.BucketAccessControl.html#t:t/0">GoogleApi.Storage.V1.Model.BucketAccessControl.t</a>()],
+  billing: <a href="GoogleApi.Storage.V1.Model.BucketBilling.html#t:t/0">GoogleApi.Storage.V1.Model.BucketBilling.t</a>(),
+  cors: [<a href="GoogleApi.Storage.V1.Model.BucketCors.html#t:t/0">GoogleApi.Storage.V1.Model.BucketCors.t</a>()],
+  defaultEventBasedHold: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  defaultObjectAcl: [<a href="GoogleApi.Storage.V1.Model.ObjectAccessControl.html#t:t/0">GoogleApi.Storage.V1.Model.ObjectAccessControl.t</a>()],
+  encryption: <a href="GoogleApi.Storage.V1.Model.BucketEncryption.html#t:t/0">GoogleApi.Storage.V1.Model.BucketEncryption.t</a>(),
+  etag: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  id: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  kind: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  labels: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
+  lifecycle: <a href="GoogleApi.Storage.V1.Model.BucketLifecycle.html#t:t/0">GoogleApi.Storage.V1.Model.BucketLifecycle.t</a>(),
+  location: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  logging: <a href="GoogleApi.Storage.V1.Model.BucketLogging.html#t:t/0">GoogleApi.Storage.V1.Model.BucketLogging.t</a>(),
+  metageneration: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  name: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  owner: <a href="GoogleApi.Storage.V1.Model.BucketOwner.html#t:t/0">GoogleApi.Storage.V1.Model.BucketOwner.t</a>(),
+  projectNumber: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  retentionPolicy: <a href="GoogleApi.Storage.V1.Model.BucketRetentionPolicy.html#t:t/0">GoogleApi.Storage.V1.Model.BucketRetentionPolicy.t</a>(),
+  selfLink: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  storageClass: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(),
+  timeCreated: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  updated: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(),
+  versioning: <a href="GoogleApi.Storage.V1.Model.BucketVersioning.html#t:t/0">GoogleApi.Storage.V1.Model.BucketVersioning.t</a>(),
+  website: <a href="GoogleApi.Storage.V1.Model.BucketWebsite.html#t:t/0">GoogleApi.Storage.V1.Model.BucketWebsite.t</a>()
+}</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</div>
+          </div>
+        </section>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions          </h1>
+          <div class="functions-list">
+<div class="detail" id="decode/2">
+    <div class="detail-header">
+    <a href="#decode/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">decode(value, options)</span>
+      <a href="https://github.com/GoogleCloudPlatform/elixir-google-api/tree/master/clients/storage/blob/master/lib/google_api/storage/v1/model/bucket.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+        
+      <div class="specs">
+          <pre>decode(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">struct</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">struct</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+<p>Unwrap a decoded JSON object into its complex fields.</p>
+  </section>
+</div>
+          </div>
+        </section>
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/html-4f6aa19597cd1982c84e.js"></script>
+  
+  </body>
+</html>
+
